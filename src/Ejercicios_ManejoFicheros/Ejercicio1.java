@@ -1,12 +1,12 @@
-package FileUtils;
+package Ejercicios_ManejoFicheros;
 
 import java.io.File;
 import java.io.IOException;
 
-public class Ejercicio_CrearDirectorioYFicheros {
+public class Ejercicio1 {
     public static void main(String[] args) {
         // Crear el directorio
-        File directorio = new File("mi_directorio");
+        File directorio = new File("NUEVODIR");
 
         if (!directorio.exists()) {
             if (directorio.mkdir()) { /** SE traduce en: "Si la creación del directorio tiene
@@ -28,24 +28,24 @@ public class Ejercicio_CrearDirectorioYFicheros {
         }
 
         // Crear los archivos dentro del directorio
-        File archivo1 = new File(directorio, "fichero1.txt");
-        File archivo2 = new File(directorio, "fichero2.txt");
+        File archivo1 = new File(directorio, "FICHERO1.txt");
+        File archivo2 = new File(directorio, "FICHERO2.txt");
 
         try {
             if (archivo1.createNewFile()) {
-                System.out.println("Archivo 1 creado exitosamente.");
+                System.out.println("FICHERO1 creado exitosamente.");
             } else {
                 System.err.println("No se pudo crear el archivo 1.");
             }
 
             if (archivo2.createNewFile()) {
-                System.out.println("Archivo 2 creado exitosamente.");
+                System.out.println("FICHERO2 creado exitosamente.");
             } else {
                 System.err.println("No se pudo crear el archivo 2.");
             }
             // Renombrar el archivo2.txt
-            File nuevoArchivo2 = new File(directorio, "nuevo_fichero2.txt");
-            if (archivo2.renameTo(nuevoArchivo2)) {
+            File nuevoArchivo1 = new File(directorio, "FICHERO1-COPIA.txt");
+            if (archivo2.renameTo(nuevoArchivo1)) {
                 System.out.println("Archivo 2 renombrado exitosamente a " + "nuevo_fichero2.txt");
             } else {
                 System.err.println("No se pudo renombrar el archivo 2.");
