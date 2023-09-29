@@ -13,7 +13,7 @@ public class Ejercicio2 {
         // Luego mas adelante la reutilizaremos para modificarla y poner la ruta de otro fichero
         String ruta_completa = "C:\\Users\\KevinLoayzaS\\IdeaProjects\\Acceso_Datos\\NUEVODIR\\FICHERO1.TXT" ;
 
-        File fichero1 = new File(ruta_completa);    //CCREAMOS EL FICHERO 1 CON LA RUTA AÑADIDA ANTERIORMENTE
+        File fichero1 = new File(ruta_completa);    //CREAMOS EL FICHERO 1 CON LA RUTA AÑADIDA ANTERIORMENTE
         if (fichero1.exists()){         //AQUI VERIFICAMOS SI EL FICHERO EXISTE
             if (fichero1.delete()){     //SI EXISTE PROCEDEREMOS A ELIMINARLO
                 System.out.println("El fichero 1 ha sido eliminado");
@@ -31,6 +31,8 @@ public class Ejercicio2 {
 
         ruta_completa = "C:\\Users\\KevinLoayzaS\\IdeaProjects\\Acceso_Datos\\NUEVODIR\\FICHERO1-COPIA.TXT" ;
         File fichero2 = new File(ruta_completa);    //VOLVEMOS A CREAR UN FILE PERO ESTA VEZ PARA EL FICHERO 2
+
+
         if (fichero2.exists()){           //REALIZAMOS LOS MISMO PASOS QUE CON EL 1
             if (fichero2.delete()){
                 System.out.println("El fichero1-copia ha sido eliminado");
@@ -47,6 +49,7 @@ public class Ejercicio2 {
 
         //YA TENEMOS LOS FICHEROS ELIMINADOS Y POR LO TANTO EL DIRECTORIO VACIO, AHORA YA PODEMOS ELIMINAR EL DIRECTORIO
         // MODIFICAMOS LA RUTA NUEVAMENTE PARA INDICAR EL DIRECTORIO
+
         ruta_completa = "C:\\Users\\KevinLoayzaS\\IdeaProjects\\Acceso_Datos\\NUEVODIR" ;
         File directorio = new File(ruta_completa);  // CREAMOS UN FILE PARA EL DIRECTORIO
         if (directorio.exists()){          //REALIZAMOS LOS MISMO PASOS QUE CON EL 1 Y 2
