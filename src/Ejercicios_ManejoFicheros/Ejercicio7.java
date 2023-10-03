@@ -50,7 +50,5 @@ public class Ejercicio7 {
             System.err.println("Error al copiar el archivo");
             e.printStackTrace();
         }
-
-
     }
 }
