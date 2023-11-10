@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipo_futbol[
+
+<!-- ELEMENTOS -->
+
+	<!ELEMENT equipo_futbol (datos_equipo, junta_directiva, plantilla)>
+		<!ELEMENT datos_equipo (nombre, fundacion, estadio, socios, patrocinadores)>
+			<!ELEMENT nombre (#PCDATA)>
+			<!ELEMENT fundacion (#PCDATA)>
+			<!ELEMENT estadio (#PCDATA)>
+			<!ELEMENT socios (#PCDATA)>
+			<!ELEMENT patrocinadores (patrocinador+)>
+			<!ELEMENT patrocinador (#PCDATA)>
+
+		<!ELEMENT junta_directiva (presidente, vicepresidente, tesorero)>
+			<!ELEMENT presidente (#PCDATA)>
+			<!ELEMENT vicepresidente (#PCDATA)>
+			<!ELEMENT tesorero (#PCDATA)>
+	
+
+	<!ELEMENT plantilla (cuerpo_tecnico, jugadores)>
+		<!ELEMENT cuerpo_tecnico (entrenador, entrenador_asistente, preparador_fisico, analista)>
+			<!ELEMENT entrenador (#PCDATA)>
+			<!ELEMENT entrenador_asistente (#PCDATA)>
+			<!ELEMENT preparador_fisico (#PCDATA)>
+			<!ELEMENT analista (#PCDATA)>
+		<!ELEMENT jugadores (porteros, defensas, centrocampsitas, delanteros)>
+
+			<!ELEMENT porteros (portero+)>
+				<!ELEMENT portero (nombre, fecha_nacimiento, pais_nacimiento, altura, peso, dorsal)>
+		
+					<!ELEMENT fecha_nacimiento (dia, mes, anio)>
+						<!ELEMENT dia (#PCDATA)>
+						<!ELEMENT mes (#PCDATA)>
+						<!ELEMENT anio (#PCDATA)>
+					<!ELEMENT pais_nacimiento (#PCDATA)>
+					<!ELEMENT altura (#PCDATA)>
+					<!ELEMENT peso (#PCDATA)>
+					<!ELEMENT dorsal (#PCDATA)>
+					
+
+			<!ELEMENT defensas (defensa+)>
+				<!ELEMENT defensa (nombre, fecha_nacimiento, pais_nacimiento, altura, peso, dorsal)>
+					
+
+			<!ELEMENT centrocampsitas (centrocampista+)>
+				<!ELEMENT centrocampista (nombre, fecha_nacimiento, pais_nacimiento, altura, peso, dorsal)>
+					
+
+			<!ELEMENT delanteros (delantero+)>
+				<!ELEMENT delantero (nombre, fecha_nacimiento, pais_nacimiento, altura, peso, dorsal)>
+					
+
+<!-- ATRIBUTOS --> 
+
+		<!ATTLIST equipo_futbol id_equipo ID #REQUIRED>
+		
+		<!ATTLIST portero situacion_jugador (cedido|comprado|vendido) #REQUIRED>
+		<!ATTLIST portero pierna_buena (zurdo|diestro) #REQUIRED>
+		
+		<!ATTLIST defensa situacion_jugador (cedido|comprado|vendido) #REQUIRED>
+		<!ATTLIST defensa pierna_buena (zurdo|diestro) #REQUIRED>
+		
+		<!ATTLIST centrocampista situacion_jugador (cedido|comprado|vendido) #REQUIRED>
+		<!ATTLIST centrocampista pierna_buena (zurdo|diestro) #REQUIRED>
+
+		<!ATTLIST delantero situacion_jugador (cedido|comprado|vendido) #REQUIRED>
+		<!ATTLIST delantero pierna_buena (zurdo|diestro) #REQUIRED>
+		
+		<!ATTLIST jugadores medida_peso CDATA #FIXED "kilo"> 
+		<!ATTLIST jugadores medida_altura CDATA #FIXED "centimetro"> 
+
+
+]>
+
+<equipo_futbol id_equipo="FCB">
+
+	<datos_equipo>
+		<nombre>FC Barcelona</nombre>
+		<fundacion>1899</fundacion>
+		<estadio>Camp nou</estadio>
+		<socios>153.458</socios>
+		<patrocinadores>
+			<patrocinador>Nike</patrocinador>
+			<patrocinador>Spotify</patrocinador>
+			<patrocinador>Konami</patrocinador>
+			<patrocinador>Cupra</patrocinador>
+		</patrocinadores>
+	</datos_equipo>
+	
+	<junta_directiva>
+		<presidente>Joan Laporta</presidente>
+		<vicepresidente>Rafa Yuste</vicepresidente>
+		<tesorero>Ferran Olivé</tesorero>
+	</junta_directiva>
+	
+	<plantilla>
+		<cuerpo_tecnico>
+			<entrenador>Xavi Hernandez</entrenador>
+			<entrenador_asistente>Óscar Hernandez</entrenador_asistente>
+			<preparador_fisico>Iván Torres</preparador_fisico>
+			<analista>Sergio Garcia</analista>
+		</cuerpo_tecnico>
+		
+		<jugadores medida_peso = "kilo" medida_altura = "centimetro">
+		
+			<porteros>
+			
+				<portero situacion_jugador = "comprado" pierna_buena = "diestro">
+					<nombre>Marc-André ter Stegen</nombre>
+					<fecha_nacimiento>
+						<dia>30</dia>
+						<mes>Abril</mes>
+						<anio>1992</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>Alemania</pais_nacimiento>
+					<altura>187</altura>
+					<peso>85</peso>
+					<dorsal>1</dorsal>
+				</portero>
+				
+				<portero situacion_jugador = "comprado" pierna_buena = "zurdo">
+					<nombre>Iñaki Peña</nombre>
+					<fecha_nacimiento>
+						<dia>02</dia>
+						<mes>Marzo</mes>
+						<anio>1999</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>España</pais_nacimiento>
+					<altura>184</altura>
+					<peso>78</peso>
+					<dorsal>13</dorsal>
+				</portero>
+			
+			</porteros>
+		
+			<defensas>
+			
+				<defensa situacion_jugador = "comprado" pierna_buena = "diestro" >
+					<nombre>Ronald Araujo</nombre>
+					<fecha_nacimiento>
+						<dia>7</dia>
+						<mes>Marzo</mes>
+						<anio>1999</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>Uruguay</pais_nacimiento>
+					<altura>188</altura>
+					<peso>79</peso>
+					<dorsal>4</dorsal>
+				</defensa>
+				
+				<defensa situacion_jugador = "cedido" pierna_buena = "diestro">
+					<nombre>João Cancelo</nombre>
+					<fecha_nacimiento>
+						<dia>27</dia>
+						<mes>Mayo</mes>
+						<anio>1994</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>Portugal</pais_nacimiento>
+					<altura>182</altura>
+					<peso>74</peso>
+					<dorsal>2</dorsal>
+				</defensa>
+			
+			</defensas>
+				
+			<centrocampsitas>
+			
+				<centrocampista situacion_jugador = "comprado" pierna_buena = "diestro">
+					<nombre>Pedri González</nombre>
+					<fecha_nacimiento>
+						<dia>25</dia>
+						<mes>Noviembre</mes>
+						<anio>2002</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>España</pais_nacimiento>
+					<altura>174</altura>
+					<peso>60</peso>
+					<dorsal>8</dorsal>
+				</centrocampista>
+				
+				<centrocampista situacion_jugador = "vendido" pierna_buena = "zurdo" >
+					<nombre>Oriol Romeu</nombre>
+					<fecha_nacimiento>
+						<dia>24</dia>
+						<mes>Septiembre</mes>
+						<anio>1991</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>España</pais_nacimiento>
+					<altura>183</altura>
+					<peso>83</peso>
+					<dorsal>18</dorsal>
+				</centrocampista>
+				
+			</centrocampsitas>
+			
+				
+			<delanteros>
+			
+				<delantero situacion_jugador = "comprado" pierna_buena = "diestro">
+					<nombre>Robert Lewandowski</nombre>
+					<fecha_nacimiento>
+						<dia>21</dia>
+						<mes>Agosto</mes>
+						<anio>1988</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>Polonia</pais_nacimiento>
+					<altura>185</altura>
+					<peso>81</peso>
+					<dorsal>9</dorsal>
+				</delantero>
+				
+				<delantero situacion_jugador = "cedido" pierna_buena = "zurdo">
+					<nombre>João Félix</nombre>
+					<fecha_nacimiento>
+						<dia>10</dia>
+						<mes>Noviembre</mes>
+						<anio>1999</anio>
+					</fecha_nacimiento>
+					<pais_nacimiento>Portugal</pais_nacimiento>
+					<altura>181</altura>
+					<peso>70</peso>
+					<dorsal>14</dorsal>
+				</delantero>
+			
+			</delanteros>
+			
+		</jugadores>
+	</plantilla>
+
+</equipo_futbol>
