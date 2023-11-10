@@ -11,6 +11,7 @@ import org.xml.sax.SAXException;
 
 public class Ejercicio3_DTD {
     public static void main(String[] args){
+
         try {
             DocumentBuilderFactory factory =DocumentBuilderFactory.newInstance();
             factory.setValidating(true);
@@ -27,7 +28,6 @@ public class Ejercicio3_DTD {
         }catch (Exception e){
             System.out.println("Error de validación: " + e.getMessage());
         }
-
 
 
 
