@@ -1,4 +1,4 @@
-package Tema1_EjerciciosRepaso;
+package UD1_1_RepasoJAVAejercicios;
 
 import java.util.Scanner;
 

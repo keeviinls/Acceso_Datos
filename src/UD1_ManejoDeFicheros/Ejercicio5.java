@@ -1,7 +1,6 @@
-package Ejercicios_ManejoFicheros;
+package UD1_ManejoDeFicheros;
 
 import java.io.File;
-import java.util.Arrays;
 
 public class Ejercicio5 {
     public static void main(String[] args) {

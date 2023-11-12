@@ -1,4 +1,4 @@
-package Ejercicios_ManejoFicheros.FormasDeAcessoAunFichero;
+package UD1FormasDeAcessoAunFichero;
 
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,12 +1,9 @@
-package Ejercicios_Excepciones;
+package UD1_1_RepasoJAVAejercicios;
+
 
 import java.util.Scanner;
 
 public class Ejercicio_4 {
-    /**
-     * ESTE EJERCICIO TRATA SOBRE RETOCAR EL EJERCICIO 4 DE EJERCICIOS DE REPASO
-     * ESTO ES UNA COPIA PARA NO MODIFICARLA LA VERDADERA
-     */
 
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
