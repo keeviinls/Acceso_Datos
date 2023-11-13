@@ -7,7 +7,7 @@ public class FicherosBinariosPersona {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        // CREAMOS EL FICHERO
+        // CREAMOS EL ATRIBUTO DEL FICHERO
         File fichero = new File("./persona1");
         // LLAMAR AL METOOD DE GUARDAR OBJETO
         guardarObjeto(fichero);
@@ -22,16 +22,18 @@ public class FicherosBinariosPersona {
          */
 
         try {
-            fichero.createNewFile();
+            fichero.createNewFile();    //CREAMOS EL FICHERO
         }catch (IOException e){
-            System.out.println("El fichero "+fichero.getName()+ " no se ha podido crear correctamente");
-            System.exit(-1);
+            System.out.println("El fichero "+fichero.getName()+ " no se ha podido crear correctamente");   //MOSTRAMOS EL MENSAJE QUE MOSTRARA SI OCURRE UN ERROR
+            System.out.println("Este error ha ocurrido debido a: ");    // ESTO ES OTRO MENSAJE QUE SE MOSTRARA DEBAJO DEL ANTERIOR
+            System.out.println(e.getMessage());     // MUESTRA EL ERROR CONCRETAMENTE
+            System.exit(-1);    //USAMOS System.exit PARA QUE CUANDO EL PROGRAMA LLEGUE HASTA AQUI, CIERRE COMPLETAMENTE SU EJECUCION. EL "-1" INDICA QUE EL PROGRAMA SE HA CERRADO CON UN CODIGO DE SALIDA ESPECIFICO
         }
 
         /**
          * CREAMOS EL OBJETO PERSONA Y LE AÑADIMOS LOS DATOS
          */
-        Persona persona = new Persona(1, "Zoro", 1, "49998728V");
+        Persona persona = new Persona(1, "Zoro", 1, "49998728V");   //CREAMOS LA PERSONA Y LE AÑADIMOS LOS DATOS
         System.out.println("La persona ha sido creada");
 
         /**
@@ -219,24 +221,3 @@ public class FicherosBinariosPersona {
 
 }
 
-/*
-          MODIFICAMOS ALGO DEL OBJETO PERSONA CREADO ANTERIORMENTE
-
-        persona.setEdad(31);
-
-    // Creación de un nuevo flujo de salida de bytes hacia el archivo
-    FileOutputStream fileOut = new FileOutputStream(fichero);
-
-    // Creación de un nuevo ObjectOutputStream que se conecta al nuevo flujo de salida de bytes
-    ObjectOutputStream out = new ObjectOutputStream(fileOut);
-
-    // Escribir el objeto persona modificado en el nuevo flujo de salida
-            out.writeObject(persona);
-
-    // Cerrar el ObjectInputStream, el flujo de entrada de bytes, el ObjectOutputStream y el flujo de salida de bytes
-            in.close();
-            fichero_entrada.close();
-            out.close();
-            fileOut.close();
-
-    */
