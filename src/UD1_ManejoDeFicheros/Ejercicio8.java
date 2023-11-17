@@ -1,4 +1,4 @@
-package Ejercicios_ManejoFicheros;
+package UD1_ManejoDeFicheros;
 
 import org.apache.commons.io.FileUtils;
 

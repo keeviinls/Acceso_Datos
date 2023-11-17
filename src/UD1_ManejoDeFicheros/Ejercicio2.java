@@ -1,7 +1,6 @@
-package Ejercicios_ManejoFicheros;
+package UD1_ManejoDeFicheros;
 
 import java.io.File;
-import java.io.IOException;
 
 public class Ejercicio2 {
     public static void main(String[] args) {

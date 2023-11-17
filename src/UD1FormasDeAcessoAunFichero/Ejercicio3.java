@@ -1,7 +1,6 @@
-package Ejercicios_ManejoFicheros.FormasDeAcessoAunFichero;
+package UD1FormasDeAcessoAunFichero;
 
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
