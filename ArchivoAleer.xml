@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raiz>
+    <elemento atributo="valor1">
+        <contenido>Texto1</contenido>
+    </elemento>
+    <elemento atributo="valor2">
+        <contenido>Texto2</contenido>
+    </elemento>
+</raiz>
