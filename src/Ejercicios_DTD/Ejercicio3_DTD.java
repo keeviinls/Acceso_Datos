@@ -13,6 +13,8 @@ public class Ejercicio3_DTD {
     public static void main(String[] args){
 
         try {
+
+
             DocumentBuilderFactory factory =DocumentBuilderFactory.newInstance();
             factory.setValidating(true);
             factory.setNamespaceAware(true);
