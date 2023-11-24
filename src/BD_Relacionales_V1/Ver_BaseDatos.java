@@ -39,6 +39,9 @@ public class Ver_BaseDatos {
                 System.out.println("0. Salir del programa");
                 System.out.println("1. Mostrar emp_no, oficio y dept_no");
                 System.out.println("2. Mostrar emp_no, oficio, dept_no y dnombre");
+                System.out.println("3. Insertar datos");
+                System.out.println("4. Actualizar datos");
+                System.out.println("5. Eliminar datos de la tabla");
 
                 // Pedimos al usuario que escoja una opcion y guardaremos su respuesta en la variable "opcion"
                 System.out.println("Introduzca una opción por favor");
@@ -63,6 +66,10 @@ public class Ver_BaseDatos {
                         mostrar_con_dnombre(); // ---- ABAJO HAY UNA DESCRIPCION COMPLETA DE ESTE METODO ------
                         break;
 
+                    case 3:
+                        insertar_datos_empleados();
+                        break;
+
                     // Si el usuario selecciona una opcion que no esta entre las disponibles (0-2), le mostrara un mensaje
                     default:
                         System.out.println("ERROR, SELECCIONA UNA DE LAS OPCIONES DISPONIBLES POR FAVOR");
@@ -71,6 +78,47 @@ public class Ver_BaseDatos {
 
                 // Ponemos opcion!=0, indica que el programa estara mientras la variable opcion no sea 0.
             }while (opcion!=0);
+    }
+
+    private static void insertar_datos_empleados() throws SQLException {
+
+        asignar_bd();
+
+        PreparedStatement ps = conn.prepareStatement("insert into empleados (apellido, oficio, dir, fecha_alt, salario, comision, dept_no) values (?,?,?,?,?,?)");
+
+        System.out.println("Introduzca el apellido");
+        String apellido = sc.next();
+
+        System.out.println("Introduzca el oficio");
+        String oficio = sc.next();
+
+        System.out.println("Introduzca la direccion (CodigPostal)");
+        int dir = sc.nextInt();
+
+        System.out.println("Introduzca la fecha (AA-MM-DD)");
+        String fecha = sc.next();
+
+        System.out.println("Introduzca el salario");
+        float salario = sc.nextFloat();
+
+        System.out.println("Introduzca la comision");
+        float comision = sc.nextFloat();
+
+        System.out.println("Dime el numero de departamento");
+        int numero_departamento = sc.nextInt();
+
+        ps.setString(1,apellido);
+        ps.setString(2, oficio);
+        ps.setInt(3, dir);
+        ps.setString(4, fecha);
+        ps.setFloat(5, salario);
+        ps.setInt(6,numero_departamento);
+
+        ps.executeUpdate();
+        System.out.println("Registro insertado correctamente");
+
+
+
     }
 
     private static void mostrar_con_dnombre() throws SQLException{
