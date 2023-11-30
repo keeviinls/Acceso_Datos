@@ -9,8 +9,9 @@ import org.w3c.dom.Element;
 import java.io.File;
 
 public class LeerXMLconDOM {
-    /**
-     * Este ejercicio es copiado del documento AD_XML_DOM_SAX_v2, pagina 12
+
+    /*
+     * Este ejercicio es copiado del documento AD_XML_DOM_SAX_v2, página 12
      */
 
     public static void main(String[] args) {
